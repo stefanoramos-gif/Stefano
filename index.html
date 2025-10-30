@@ -1,115 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>FLOR AMARILLA :)</title>
-    
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: sans-serif;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefano Ramos Mendoza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-      body {
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        background-color: #fce4ec;
-      }
+<body style="background-color: rgb(96, 131, 172);">
+    <header>
+        <h1 class="nombre">Stefano Ramos Mendoza</h1>
+    </header>
+    <header>
+        <div class="comtainer">
+            
+            <nav>
+                <a href="#Datos sobre mi">Datos sobre mi</a>
+                <a href="#Estudios">Estudios</a>
+                <a href="#Hobbies">Hobbies</a>
+                <a href="#Compañeros">Compañeros</a>
+                <a href="#Contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <header>
+        <div class = "hoja">
+            <section id="Datos sobre mi ">
+            <div class="image-container"></div>
+            <div class="texto"></div>
+                <h2 class="h2">Datos sobre mi</h2>
+                <p class="p">Soy Stefano Anibal Ramos, nací en el 2007<br>
+                                en la ciudad de Arequipa, tengo 18 años de edad,<br>
+                                estudio Computer Science en la Universidad Católica San Pablo,<br>
+                                curso por mi primer año.</p>
+            </section>
+            <section id="Estudios">
+                <h2 class="h2">Estudios</h2>
+                <p class="p">Primaria y secundaria en Colegio Claret: <br>
+                                <a href="https://aqpsclaret.edu.pe/">https://aqpsclaret.edu.pe/</a><br>
+                                Instituto Jobs,curso de ensamblaje y mantenimiento de computadoras:<br>
+                                <a href="http://institutojobs.edu.pe/curso-de-ensamblaje-y-mantenimiento-de-computadoras/">http://institutojobs.edu.pe</a><br>
+                               Computer Science, Universidad Catolica San Pablo <br>
+                                </p>
+            <section id="Hobbies">
+                <h2 class="h2">Hobbies</h2>
+                <p class="p">Parte de mis Hobbies:<br>
+                     Jugar Basquet 🏀 <br>
+                    Jugar Futbol<br>
+                    Cocinar
+                </p>
+             
 
-      .container {
-        width: 300px;
-        text-align: center;
-        padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-      }
 
-      .container h2 {
-        font-size: 1.7rem;
-      }
+            </section>
+            <section id="Compañeros">
+                <h2 class="h2">Compañeros</h2>
+                <p class="p"><a href="https://luissayra.github.io/LUIS-SAYRA/">https://luissayra.github.io/LUIS-SAYRA/</a> </p>
 
-      .input-display {
-        text-align: center;
-        margin: 0;
-        font-size: 30px;
-        margin: 10px 0;
-      }
 
-      .keypad {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-      }
+            </section>
+            <section id="Contacto">
+                <h2 class="h2">Contacto</h2>
+                <p class="p">
+                    Correo Personal <br>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=stefanoramosmendoza@gmail.com&su=Consulta&body=Hola%20Stefano">stefanoramosmendoza@gmail.com</a>📧<br>
+                    Correo Institucional<br>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=stefano.ramos@ucsp.edu.pe&su=Consulta&body=Hola%20Stefano">stefano.ramos@ucsp.edu.pe</a>📧<br>
+                    Celular <a href="tel: +51 959182775">959182775</a><br>
+                    linkedin <a href="https://www.linkedin.com/in/stefano-anibal-ramos-mendoza-51025837a/">Stefano Ramos Mendoza</a>
+                 
+                </p>
 
-      .keypad button {
-        padding: 15px;
-        font-size: 25px;
-        background-color: #f8bbd0;
-        border: 1px black solid;
-        outline: none;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
 
-      .key:hover {
-        background-color: #f48fb1;
-      }
+            </section>
+                    
+        
+        </div>
+        
 
-      .keypad button:last-child {
-        grid-column: 2/3;
-      }
-
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h2>
-        🔒<br />
-        Ingrese la contraseña
-      </h2>
-      <div class="input-display" id="inputDisplay">••••</div>
-      <div class="keypad">
-        <button class="key" onclick="enterDigit('1')">1</button>
-        <button class="key" onclick="enterDigit('2')">2</button>
-        <button class="key" onclick="enterDigit('3')">3</button>
-        <button class="key" onclick="enterDigit('4')">4</button>
-        <button class="key" onclick="enterDigit('5')">5</button>
-        <button class="key" onclick="enterDigit('6')">6</button>
-        <button class="key" onclick="enterDigit('7')">7</button>
-        <button class="key" onclick="enterDigit('9')">9</button>
-        <button class="key" onclick="enterDigit('8')">8</button>
-        <button class="key" onclick="enterDigit('0')">0</button>
-      </div>
-    </div>
-
-    <script>
-      const correctPassword = "0101";
-      const display = document.getElementById("inputDisplay");
-      let input = "";
-      function enterDigit(digit) {
-        if (input.length < 4) {
-          input += digit;
-        }
-        display.textContent = input.padEnd(4, "•");
-        if (input.length === 4) {
-          if (input === correctPassword) {
-            window.location.href = "flower.html"; 
-          } else {
-            alert("Contraseña incorecta, intenta de nuevo");
-            input = "";
-            display.textContent = "••••";
-          }
-        }
-      }
-    </script>
-  </body>
+            
+    </header>
+</body>
 </html>
